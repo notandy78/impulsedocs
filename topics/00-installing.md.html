@@ -75,28 +75,32 @@ This guide will show you how to install impulse, on a server. Before we start, i
 
 <p><a name="Installation"></a></p>
 <h2>Installation</h2>
-<p>* Install <a href="https://github.com/FredyH/MySQLOO/releases">mysqloo</a> onto your server.
-* Make sure you remove ULX if you have it already, it is not compatible with impulse
-* Install <a href="https://github.com/FPtje/Falcos-Prop-protection">FPP</a> onto your server.
-* Turn off MySQL strict mode on your MySQL database.
-* Download the <a href="https://github.com/vingard/impulse">impulse framework</a> and put it in your gamemodes folder.
-* Download your schema of choice and also put it in your gamemodes folder. If you don't have a schema, you can use the <a href="https://github.com/vingard/impulseskeleton">skeleton schema</a>.
-* (<em>not required, but reccomended</em>) Install and setup <a href="https://www.gmodstore.com/market/view/2899">GExtension</a>.
-<em> Goto garrysmod/data on your server and create a folder called 'impulse'.
-* Inside the impulse folder create a file called config.yml and paste in the config below:
-  ```yml
-  db:
-   ip: "mysql server ip here"
-   username: "db username"
-   password: "db pass"
-   database: "db name"
-   port: 3306
-  ```
-  * Replace the values here with those of your database.
-* Make sure the map you are running has a map config inside the schema, go into the schema gamemode folder, then check schema/config/maps/<strong>MAP NAME HERE</strong>.lua.
-</em> Set the of your server to the folder name of the schema.
-* That's it. Join the server to confirm if everything is working. If it's not working, check the console for errors and read the message on the in-game error screen.
-* *You probably will want to edit some of the schema config. In your schema folder, navigate to config/sh_config.lua to configure your server.*</p>
+<p>1. Install <a href="https://github.com/FredyH/MySQLOO/releases">mysqloo</a> onto your server.<br/>
+2. Make sure you remove ULX if you have it already, it is not compatible with impulse<br/>
+3. Install <a href="https://github.com/FPtje/Falcos-Prop-protection">FPP</a> onto your server.<br/>
+4. Turn off MySQL strict mode on your MySQL database.<br/>
+5. Download the <a href="https://github.com/vingard/impulse">impulse framework</a> and put it in your gamemodes folder.<br/>
+6. Download your schema of choice and also put it in your gamemodes folder. If you don't have a schema, you can use the <a href="https://github.com/vingard/impulseskeleton">skeleton schema</a>.<br/>
+7. (<em>not required, but reccomended</em>) Install and setup <a href="https://www.gmodstore.com/market/view/2899">GExtension</a>.<br/>
+8. Goto garrysmod/data on your server and create a folder called 'impulse'.<br/>
+9. Inside the impulse folder create a file called config.yml and paste in the config below:<br/></p>
+
+<pre><code> db:
+  ip: "mysql server ip here"
+  username: "db username"
+  password: "db pass"
+  database: "db name"
+  port: 3306
+</code></pre>
+
+
+<ol>
+    <li>Replace the values in the config.yml file with those of your database.<br/></li>
+    <li>Make sure the map you are running has a map config inside the schema, go into the schema gamemode folder, then check schema/config/maps/<strong>MAP NAME HERE</strong>.lua.<br/></li>
+    <li>Set the of your server to the folder name of the schema.<br/></li>
+    <li>That's it. Join the server to confirm if everything is working. If it's not working, check the console for errors and read the message on the in-game error screen.<br/></li>
+    <li>*You probably will want to edit some of the schema config. In your schema folder, navigate to config/sh_config.lua to configure your server.*<br/></li>
+</ol>
 
 		</article>
 
