@@ -12,7 +12,7 @@
 		<meta property="og:site_name" content="impulse documentation" />
 
 			<meta property="og:description" content="
-lol..." />
+This guide will show you how to install impulse, on a server. Before we start, it should be understood impulse is made to be developed in a locally hosted peer-to-peer server, and it is made to be ran in production on a game server. To learn how to setup..." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -67,7 +67,36 @@ lol..." />
 		<article>
 
 <h1>Installing impulse</h1>
-<p>lol</p>
+<p>This guide will show you how to install impulse, on a server. Before we start, it should be understood impulse is made to be developed in a locally hosted peer-to-peer server, and it is made to be ran in production on a game server. To learn how to setup impulse, for development on your local machine, take a look at <a href="https://vingard.github.io/impulsedocs/topics/10-devsetup.md.html">the dev setup guide</a>.</p>
+
+<p><a name="Warning"></a></p>
+<h2>Warning</h2>
+<p>impulse is a <strong>framework</strong>, a framework is similar to a game engine, if there is an issue with your schema, it is not the frameworks fault. Please consult the developer of the schema for help regarding those issues.</p>
+
+<p><a name="Installation"></a></p>
+<h2>Installation</h2>
+<p>* Install <a href="https://github.com/FredyH/MySQLOO/releases">mysqloo</a> onto your server.
+* Make sure you remove ULX if you have it already, it is not compatible with impulse
+* Install <a href="https://github.com/FPtje/Falcos-Prop-protection">FPP</a> onto your server.
+* Turn off MySQL strict mode on your MySQL database.
+* Download the <a href="https://github.com/vingard/impulse">impulse framework</a> and put it in your gamemodes folder.
+* Download your schema of choice and also put it in your gamemodes folder. If you don't have a schema, you can use the <a href="https://github.com/vingard/impulseskeleton">skeleton schema</a>.
+* (<em>not required, but reccomended</em>) Install and setup <a href="https://www.gmodstore.com/market/view/2899">GExtension</a>.
+<em> Goto garrysmod/data on your server and create a folder called 'impulse'.
+* Inside the impulse folder create a file called config.yml and paste in the config below:
+  ```yml
+  db:
+   ip: "mysql server ip here"
+   username: "db username"
+   password: "db pass"
+   database: "db name"
+   port: 3306
+  ```
+  * Replace the values here with those of your database.
+* Make sure the map you are running has a map config inside the schema, go into the schema gamemode folder, then check schema/config/maps/<strong>MAP NAME HERE</strong>.lua.
+</em> Set the of your server to the folder name of the schema.
+* That's it. Join the server to confirm if everything is working. If it's not working, check the console for errors and read the message on the in-game error screen.
+* *You probably will want to edit some of the schema config. In your schema folder, navigate to config/sh_config.lua to configure your server.*</p>
 
 		</article>
 
